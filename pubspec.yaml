@@ -1,0 +1,11 @@
+name: breakpoints
+description: A simple library for getting page breakpoints xs, sm, md, lg, xl
+version: 0.1.0
+author: Ajanuw <ajanuw1995@gmail.com>
+homepage: https://github.com/januwA/flutter_breakpoints
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dev_dependencies:
+  test: ^1.0.0
