@@ -28,11 +28,13 @@ dependencies:
 ```
 double width = MediaQuery.of(context).size.width;
 
-Breakpoints.only(width, [BreakpointsKeys.xs, BreakpointsKeys.lg])
+Breakpoints.only(width, [Breakpoints.xs, Breakpoints.lg])
     ? Text('xs or lg')
     : Container()
 
 Breakpoints.isSm(width) ? Text('isSm') : Container()
+
+width.isXl ? Text('isXl') : SizedBox()
 
 Breakpoints(200).toString() // xs
 ```

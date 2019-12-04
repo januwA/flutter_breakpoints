@@ -12,10 +12,8 @@ void main() {
     });
 
     test('only', () {
-      expect(Breakpoints.only(1500, [BreakpointsKeys.xs, BreakpointsKeys.lg]),
-          true);
-      expect(Breakpoints.only(700, [BreakpointsKeys.xs, BreakpointsKeys.lg]),
-          false);
+      expect(Breakpoints.only(1500, [Breakpoints.xs, Breakpoints.lg]), true);
+      expect(Breakpoints.only(700, [Breakpoints.xs, Breakpoints.lg]), false);
     });
   });
 }

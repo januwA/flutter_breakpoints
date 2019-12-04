@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:breakpoints/breakpoints.dart';
 
 void main() => runApp(MyApp());
@@ -29,10 +29,14 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Breakpoints.only(width, [BreakpointsKeys.xs, BreakpointsKeys.lg])
+            Breakpoints.only(width, [Breakpoints.xs, Breakpoints.lg])
+                ? Text('xs or lg')
+                : Container(),
+            width.only([Breakpoints.xs, Breakpoints.lg])
                 ? Text('xs or lg')
                 : Container(),
             Breakpoints.isSm(width) ? Text('isSm') : Container(),
+            width.isXl ? Text('isXl') : SizedBox(),
             Text(
               'Hello, World!',
             ),
